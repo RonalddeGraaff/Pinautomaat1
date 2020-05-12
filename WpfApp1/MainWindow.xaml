@@ -5,33 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="510" Width="849.5">
-    <Grid Margin="0,0,276,0">
+        Title="MainWindow" Height="579" Width="819.5">
+    <Grid Margin="0,0,445,24" HorizontalAlignment="Right" VerticalAlignment="Bottom">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="799*"/>
-            <ColumnDefinition Width="36*"/>
-            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel HorizontalAlignment="Left" Height="409" Margin="10,70,0,0" VerticalAlignment="Top" Width="100">
+        <StackPanel HorizontalAlignment="Left" Height="409" Margin="0,70,0,0" VerticalAlignment="Top" Width="100" Grid.Column="1" Grid.ColumnSpan="2">
             <Button Content="&gt;" Height="60" Margin="0,0,0,10" IsDefault="True"/>
-            <Button Content="&gt;" Height="60" Margin="0,0,0,10"/>
-            <Button Content="&gt;" Height="60" Margin="0,0,0,10"/>
-            <Button Content="&gt;" Height="60" Margin="0,0,0,10"/>
+            <Button x:Name="b_10" Content="&gt;" Height="60" Margin="0,0,0,10" Click="b_10_Click"/>
+            <Button x:Name="b_30" Content="&gt;" Height="60" Margin="0,0,0,10" Click="b_30_Click"/>
+            <Button x:Name="b_50" Content="&gt;" Height="60" Margin="0,0,0,10" Click="b_50_Click"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Left" Height="409" Margin="432,70,0,0" VerticalAlignment="Top" Width="100">
-            <Button Content="&lt;" Height="60" Margin="0,0,0,10" IsDefault="True"/>
-            <Button Content="&lt;" Height="60" Margin="0,0,0,10"/>
-            <Button Content="&lt;" Height="60" Margin="0,0,0,10"/>
-            <Button Content="&lt;" Height="60" Margin="0,0,0,10" Click="Button_Click"/>
+        <StackPanel HorizontalAlignment="Left" Height="409" Margin="268.5,70,-368.5,0" VerticalAlignment="Top" Width="100" Grid.Column="4">
+            <Button x:Name="b_OK" Content="&lt;" Height="60" Margin="0,0,0,10" IsDefault="True" Click="Button_Click_1"/>
+            <Button x:Name="b_100" Content="&lt;" Height="60" Margin="0,0,0,10" Click="b_100_Click"/>
+            <Button x:Name="b_150" Content="&lt;" Height="60" Margin="0,0,0,10" Click="b_150_Click"/>
+            <Button x:Name="b_250" Content="&lt;" Height="60" Margin="0,0,0,10" Click="Button_Click"/>
         </StackPanel>
-        <PasswordBox HorizontalAlignment="Left" Margin="185,70,0,0" VerticalAlignment="Top" Height="56" Width="183" FontSize="24" MaxLength="4"/>
-        <Menu HorizontalAlignment="Center" Height="48" Margin="0,0,20,0" VerticalAlignment="Top" Width="536" Grid.ColumnSpan="2">
-            <MenuItem>
-                <MenuItem/>
-            </MenuItem>
-            <MenuItem Header="dIT IS TEST" Height="100" Width="100"/>
-        </Menu>
-        <TextBlock x:Name="txtMessage" HorizontalAlignment="Left" Margin="148,315,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="28" Width="220"/>
+        <TextBlock x:Name="txtMessage" HorizontalAlignment="Left" Margin="147,358,-250.5,0" TextWrapping="Wrap" Text="Voer uw 4 cijferige pincode in.." VerticalAlignment="Top" Height="28" Width="471" FontSize="16" Grid.Column="2" Grid.ColumnSpan="2" TextAlignment="Center"/>
+        <TextBlock x:Name="txt_10" HorizontalAlignment="Left" Margin="105,160,0,0" TextWrapping="Wrap" Text="€ 10" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Height="24" Width="63" Grid.Column="2"/>
+        <TextBlock x:Name="txt_30" HorizontalAlignment="Left" Margin="100,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.569,3.167" Height="24" Width="65" Grid.Column="2"><Run Text="€ "/><Run Text="3"/><Run Text="0"/></TextBlock>
+        <TextBlock x:Name="txt_50" HorizontalAlignment="Left" Margin="100,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.569,3.167" Height="24" Width="60" Grid.Column="2"><Run Text="€ "/><Run Text="5"/><Run Text="0"/></TextBlock>
+        <TextBlock x:Name="txt_100" HorizontalAlignment="Left" Margin="204.5,160,-264.5,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.569,3.167" Height="24" Width="60" Grid.Column="4"><Run Text="€ "/><Run Text="100"/></TextBlock>
+        <TextBlock x:Name="txt_150" HorizontalAlignment="Left" Margin="204.5,233,-262.5,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.569,3.167" Height="24" Width="58" Grid.Column="4"><Run Text="€ "/><Run Text="1"/><Run Text="5"/><Run Text="0"/></TextBlock>
+        <TextBlock x:Name="txt_250" HorizontalAlignment="Left" Margin="204.5,308,-262.5,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.569,3.167" Height="24" Width="58" Grid.Column="4"><Run Text="€ "/><Run Text="2"/><Run Text="5"/><Run Text="0"/></TextBlock>
+        <TextBlock x:Name="txt_OK" HorizontalAlignment="Left" Margin="218.5,86,-264.5,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.569,3.167" TextAlignment="Right" Text="OK" Width="46" Height="24" Grid.Column="4"/>
+        <PasswordBox x:Name="pwPincode" Grid.Column="2" HorizontalAlignment="Left" Margin="313,68,-55,0" VerticalAlignment="Top" Width="109" Grid.ColumnSpan="2" Height="42" FontSize="36" FontWeight="Bold"/>
 
     </Grid>
 </Window>
